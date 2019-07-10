@@ -63,8 +63,9 @@ const App = () => {
   )
 }
 const storage = {
-  get: key => localStorage.getItem(key),
-  set: (key, value) => localStorage.setItem(key, value)
+  get: key => global.localStorage && global.localStorage.getItem(key),
+  set: (key, value) =>
+    global.localStorage && global.localStorage.setItem(key, value)
 }
 const time = {
   isToday: date => date === dayjs().format("YYYY-MM-DD"),
