@@ -1,0 +1,53 @@
+{
+  "name": "thought-flow",
+  "private": true,
+  "description": "personal journaling app",
+  "version": "0.1.0",
+  "author": "Carl Barrdahl <carlbarrdahl@gmail.com>",
+  "dependencies": {
+    "autoprefixer": "^9.6.1",
+    "dayjs": "^1.8.15",
+    "gatsby": "^2.13.12",
+    "gatsby-image": "^2.2.4",
+    "gatsby-plugin-manifest": "^2.2.1",
+    "gatsby-plugin-offline": "^2.2.1",
+    "gatsby-plugin-postcss": "^2.1.0",
+    "gatsby-plugin-purgecss": "^4.0.0",
+    "gatsby-plugin-react-helmet": "^3.1.0",
+    "gatsby-plugin-sharp": "^2.2.3",
+    "gatsby-plugin-stripe": "^1.2.1",
+    "gatsby-source-filesystem": "^2.1.3",
+    "gatsby-source-stripe": "^3.0.1",
+    "gatsby-transformer-sharp": "^2.2.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-helmet": "^5.2.0",
+    "styled-components": "^4.3.2",
+    "tailwind.macro": "^1.0.0-alpha.10",
+    "tailwindcss": "^1.0.4"
+  },
+  "keywords": [
+    "journaling",
+    "health"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "build": "gatsby build",
+    "develop": "gatsby develop",
+    "start": "npm run develop",
+    "format": "prettier --write \"src/**/*.js\"",
+    "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
+  },
+  "devDependencies": {
+    "babel-plugin-macros": "^2.6.1",
+    "prettier": "^1.18.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/carlbarrdahl/thought-flow"
+  },
+  "bugs": {
+    "url": "https://github.com/carlbarrdahl/thought-flow/issues"
+  }
+}
