@@ -13,13 +13,13 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `b0tt0`,
-        short_name: `b0tt0`,
+        name: `thought flow`,
+        short_name: `thought flow`,
         start_url: `/`,
-        background_color: `#ECC94B`,
-        theme_color: `#ECC94B`,
-        display: `minimal-ui`,
-        icon: `src/images/botto.png` // This path is relative to the root of the site.
+        background_color: `#2e5090`,
+        theme_color: `#2e5090`,
+        display: `minimal-ui`
+        // icon: `src/images/botto.png` // This path is relative to the root of the site.
       }
     },
     "gatsby-plugin-postcss",
