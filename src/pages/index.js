@@ -1,57 +1,12 @@
 import React, { useEffect, useState } from "react"
+import { Link } from "gatsby"
 import dayjs from "dayjs"
 import styled from "styled-components"
 import tw from "tailwind.macro"
 
 import Layout from "../components/Layout"
-
-const Textarea = styled.textarea`${tw`w-full text-lg p-4 flex-1`};`
-const Selector = styled.section`${tw`flex justify-between`};`
-const Button = styled.button`
-  ${tw`bg-gray-300 hover:bg-gray-400 text-gray-800 py-2 px-4`};
-  opacity: ${({ disabled }) => (disabled ? 0.5 : 1)};
-`
-const Current = styled.span`${tw`p-4`};`
-
-const DateSelector = ({ value, onChange }) => {
-  const handleChange = v => e => {
-    onChange(dayjs(value).add(v, "day").format("YYYY-MM-DD"))
-  }
-  return (
-    <Selector>
-      <Button onClick={handleChange(-1)}>Previous</Button>
-      <Current>{value}</Current>
-      <Button onClick={handleChange(+1)} disabled={time.isToday(value)}>
-        Next
-      </Button>
-    </Selector>
-  )
-}
-const Editor = ({ date }) => {
-  const [ state, setState ] = useState(storage.get(date) || "")
-
-  useEffect(
-    () => {
-      storage.set(date, state)
-    },
-    [ state ]
-  )
-  return (
-    <Textarea
-      rows={10}
-      placeholder={
-        time.isToday(date) ? (
-          "Write something..."
-        ) : (
-          "You can only write for todays entry"
-        )
-      }
-      readOnly={!time.isToday(date)}
-      onChange={e => setState(e.target.value)}
-      value={state}
-    />
-  )
-}
+import Editor from "../components/Editor"
+import DateSelector from "../components/DateSelector"
 
 const App = () => {
   const [ selectedDate, selectDate ] = useState(time.format())
@@ -59,6 +14,7 @@ const App = () => {
     <Layout>
       <DateSelector value={selectedDate} onChange={selectDate} />
       <Editor key={selectedDate} date={selectedDate} />
+      <Link to="/auth">Connect device</Link>
     </Layout>
   )
 }
