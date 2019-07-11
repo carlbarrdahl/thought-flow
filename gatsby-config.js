@@ -18,8 +18,8 @@ module.exports = {
         start_url: `/`,
         background_color: `#2e5090`,
         theme_color: `#2e5090`,
-        display: `minimal-ui`
-        // icon: `src/images/botto.png` // This path is relative to the root of the site.
+        display: `minimal-ui`,
+        icon: `src/images/icon.png`
       }
     },
     "gatsby-plugin-postcss",
