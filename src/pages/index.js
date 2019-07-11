@@ -5,7 +5,7 @@ import tw from "tailwind.macro"
 
 import Layout from "../components/Layout"
 
-const Textarea = styled.textarea`${tw`w-full text-lg`};`
+const Textarea = styled.textarea`${tw`w-full text-lg p-4 flex-1`};`
 const Selector = styled.section`${tw`flex justify-between`};`
 const Button = styled.button`
   ${tw`bg-gray-300 hover:bg-gray-400 text-gray-800 py-2 px-4`};
